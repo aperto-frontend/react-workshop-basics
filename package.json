@@ -11,10 +11,13 @@
 		"babel-preset-env": "^1.6.1",
 		"babel-preset-react": "^6.24.1",
 		"babel-preset-stage-0": "^6.24.1",
+		"babel-preset-stage-1": "^6.24.1",
+		"copy-webpack-plugin": "^4.3.1",
 		"css-loader": "^0.28.7",
 		"extract-text-webpack-plugin": "^3.0.2",
 		"http-server": "^0.10.0",
 		"node-sass": "^4.7.2",
+		"node-sass-magic-importer": "^5.1.0",
 		"nodemon": "^1.13.3",
 		"npm-run-all": "^4.1.2",
 		"sass-loader": "^6.0.6",
@@ -23,12 +26,16 @@
 	},
 	"dependencies": {
 		"apicache": "^1.2.0",
+		"bourbon": "^5.0.0",
+		"bourbon-neat": "2.1.0",
 		"express": "^4.16.2",
 		"history": "^4.7.2",
 		"react": "^16.2.0",
 		"react-dom": "^16.2.0",
 		"react-router-dom": "^4.2.2",
-		"request": "^2.83.0"
+		"request": "^2.83.0",
+		"veams-services": "^1.0.1",
+		"veams-utility-grid": "^5.1.3"
 	},
 	"scripts": {
 		"dev:server": "nodemon src/server/index.js --config nodemon.config.json",

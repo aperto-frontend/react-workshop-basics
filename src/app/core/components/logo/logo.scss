@@ -1,4 +1,12 @@
 /* ===================================================
-Core Component
+Logo COmponent
 =================================================== */
-.page-wrapper {}
+
+.c-logo {
+	opacity: 1;
+
+	.logo__img {
+		max-width: 180px;
+		height: auto;
+	}
+}

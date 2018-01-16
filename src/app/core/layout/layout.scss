@@ -2,12 +2,30 @@
 Regions
 =================================================== */
 .r-header {
-	background-color: aliceblue;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#112944+0,022633+100 */
+	background: #112944; /* Old browsers */
+	background: -moz-linear-gradient(top, #112944 0%, #022633 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #112944 0%,#022633 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #112944 0%,#022633 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#112944', endColorstr='#022633',GradientType=0 ); /* IE6-9 */
 
 	.header__headline {
 		font-size: 3rem;
 		text-align: center;
 	}
+
+	.header__container {
+		display: flex;
+		align-items: center;
+	}
+}
+
+.r-header-left {
+}
+
+.r-header-right {
+	flex: 1;
+	text-align: right;
 }
 
 .r-main {

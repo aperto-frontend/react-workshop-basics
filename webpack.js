@@ -1,8 +1,11 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const magicImporter = require('node-sass-magic-importer');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 
 module.exports = {
+	devtool: 'cheap-module-source-map',
 	// Entry point for webpack
 	entry: './src/app/app.js',
 	// Output directory and filename
@@ -21,9 +24,10 @@ module.exports = {
 					presets: [
 						'react',
 						'stage-0',
+						'stage-1',
 						[ 'env', {
 							targets: {
-								browsers: [ 'last 2 version' ]
+								browsers: [ 'last 2 Chrome versions' ]
 							}
 						} ]
 					],
@@ -37,7 +41,16 @@ module.exports = {
 				test: /\.(s*)css$/,
 				use: ExtractTextPlugin.extract({
 					fallback: 'style-loader',
-					use: [ 'css-loader', 'sass-loader' ],
+					use: [
+						{
+							loader: 'css-loader'
+						}, {
+							loader: 'sass-loader',
+							options: {
+								importer: magicImporter(),
+							}
+						}
+					],
 				})
 			}
 		]
@@ -45,6 +58,11 @@ module.exports = {
 	plugins: [
 		new ExtractTextPlugin({
 			filename: 'css/app.bundle.css'
-		})
+		}),
+		// Copy asset files from src/app
+		new CopyWebpackPlugin([ {
+			from: `src/app/assets`,
+			ignore: [ '.gitkeep' ]
+		} ])
 	]
 };

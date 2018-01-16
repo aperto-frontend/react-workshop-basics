@@ -1,0 +1,19 @@
+/* ===================================================
+Modifiers
+=================================================== */
+.is-container {
+	padding: 1rem;
+	max-width: 1240px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.is-hidden {
+	display: none;
+}
+
+.is-hidden-text {
+	color: transparent;
+	font: 0/0 a;
+	text-shadow: none;
+}

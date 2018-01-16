@@ -12,7 +12,6 @@ class Core extends Component {
 		return (
 			<div className="page-wrapper">
 				<Layout>
-					<h2>This is my main content</h2>
 					<Route path="/" exact component={Home}/>
 					<Route path="/article" component={Article}/>
 				</Layout>
